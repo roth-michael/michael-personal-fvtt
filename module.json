@@ -1,0 +1,45 @@
+{
+  "id": "michaelPersonal",
+  "title": "Michael's Personal Module",
+  "version": "1.0.0",
+  "esmodules": [
+    "module.mjs"
+  ],
+  "styles": [
+    {
+      "src": "style.css"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "en.json",
+      "flags": {}
+    }
+  ],
+  "documentTypes": {
+    "RegionBehavior": {
+      "elevation": {}
+    }
+  },
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "packs": [
+    {
+      "name": "michael-items",
+      "label": "Michael's Items",
+      "path": "packs/michael-items",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dnd5e"
+    }
+  ],
+  "description": "",
+  "flags": {}
+}

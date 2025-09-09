@@ -1,0 +1,19 @@
+{
+    "TYPES.RegionBehavior.michaelPersonal.elevation": "Change Elevation",
+    "BEHAVIOR": {
+        "TYPES": {
+            "elevation": {
+                "FIELDS": {
+                    "startElevation": {
+                        "label": "Exit elevation",
+                        "hint": "What elevation to set the token to upon exiting"
+                    },
+                    "endElevation": {
+                        "label": "Enter elevation",
+                        "hint": "What elevation to set the token to upon entering"
+                    }
+                }
+            }
+        }
+    }
+}
