@@ -52,9 +52,9 @@ export function initialize() {
   dnd5e.dataModels.actor.config.character = CharacterDataGestalt;
   dnd5e.dataModels.item.config.class = ClassDataGestalt;
 
-  Hooks.on("dnd5e.computeLeveledProgression", (progression, actor, cls, spellcasting, count) => {
+  Hooks.on("dnd5e.computeSpellProgression", (progression, actor, cls, spellcasting, count) => {
     // Stop if already did this type of caster
-    if (count > 1 && progression.slot > 0) return false;
+    if (count > 1 && progression.spell > 0) return false;
     const allProgressions = Object.values(actor.spellcastingClasses).map(i => i.spellcasting?.progression).filter(i => i);
     // Anything's better than third
     if (spellcasting.progression === "third" && allProgressions.some(i => i !== "third")) return false;

@@ -11,7 +11,7 @@ export function initialize() {
       const isMiss = !attackRoll.isCritical && ((attackRoll.total < ac) || attackRoll.isFumble);
       if (!isMiss) return;
       const newDiv = document.createElement("div");
-      newDiv.classList.add("dnd5e2", "chat-card");
+      newDiv.classList.add("dnd5e2", "chat-card", "themed", "theme-light");
       newDiv.innerHTML = `
         <button class="michael-graze" type="button">
           <i class="fa-solid fa-burst" inert></i>
@@ -41,7 +41,7 @@ export function initialize() {
     // Topple
     if (mastery === "topple") {
       const newDiv = document.createElement("div");
-      newDiv.classList.add("dnd5e2", "chat-card");
+      newDiv.classList.add("dnd5e2", "chat-card", "themed", "theme-light");
       newDiv.innerHTML = `
         <button class="michael-topple" type="button">
           <i class="fa-solid fa-shield-heart" inert></i>
@@ -64,11 +64,11 @@ export function initialize() {
               <button data-ability="con" data-type="save" data-dc=${saveDC} data-action="rollRequest" data-visibility="all">
                 <span class="visible-dc">
                   <i class="fa-solid fa-shield-heart"></i>
-                  "DC ${saveDC} Constitution"
+                  DC ${saveDC} Constitution
                 </span>
                 <span class="hidden-dc">
                   <i class="fa-solid fa-shield-heart"></i>
-                  "Constitution"
+                  Constitution
                 </span>
               </button>
             </div>
