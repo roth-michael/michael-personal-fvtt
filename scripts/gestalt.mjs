@@ -5,8 +5,6 @@ class CharacterDataGestalt extends dnd5e.dataModels.actor.CharacterData {
     this.attributes.attunement.value = 0;
 
     for ( const item of this.parent.items ) {
-      const canAttune = !item.system.validProperties?.has?.("mgc") || item.system.properties?.has?.("mgc");
-      if ( item.system.attuned && canAttune ) this.attributes.attunement.value += 1;
       if ( item.type === "class" ) this.details.level += item.system.levels;
   }
 
